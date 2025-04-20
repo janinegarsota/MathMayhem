@@ -1,0 +1,411 @@
+.abeezee-regular {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.abeezee-regular-italic {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'ABeeZee', sans-serif;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .phone-frame {
+    width: 360px;
+    height: 640px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    border-width: 50px 16px 80px 16px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #313131, #1d1d1d) 1;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(50, 50, 50, 0.8);
+    background-image: url('skybg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .button-container {
+    display: flex;
+    width: 250px;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+#gameFoot {
+  margin-top: 20px;
+  position:relative;
+  justify-content: space-between;
+  bottom: 0px;
+
+}
+
+#gameHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  height: 50px;
+}
+
+#score, #timeremaining {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0px 2px 0px grey;
+
+}
+
+  #homeContainer button {
+    width: 70%;
+    height: 50px;
+    font-size: 25px;
+  }
+
+  button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px auto;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px #3a2179;
+    background: linear-gradient(to bottom, #a985ff, #6343ac);
+    transition: all 0.2s ease-in-out;
+    text-shadow:
+    -1.8px -1.8px 0 rgb(66, 66, 66),
+    1.8px -1.8px 0 rgb(66, 66, 66),
+    -1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 1.8px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    box-shadow: none;
+  }
+   
+  
+  #container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  #homeContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: relative;
+  }
+
+  #homeContainer h1 {
+    margin-bottom: 20px;
+  }
+
+  #instructionContainer {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  #instructionContainer p {
+    margin: 20px;
+  }
+  
+  #score {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #8d61f3;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0px 2px 0px grey;
+    text-shadow:
+    -1.8px -1.8px 0 rgb(66, 66, 66),
+    1.8px -1.8px 0 rgb(66, 66, 66),
+    -1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 1.8px rgba(0, 0, 0, 0.3);
+  }
+  
+  #correct, #wrong {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    display: none;
+    font-size: 14px;
+    z-index: 1;
+    text-shadow:
+    -1.8px -1.8px 0 rgb(66, 66, 66),
+    1.8px -1.8px 0 rgb(66, 66, 66),
+    -1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 1.8px rgba(0, 0, 0, 0.3);
+}
+  
+#correct {
+  background-color: #06990d;
+}
+
+#wrong {
+  background-color: #e5331b;
+}
+
+  h1, h2 {
+    color: white;
+    text-shadow:
+    -1.8px -1.8px 0 rgb(66, 66, 66),
+    1.8px -1.8px 0 rgb(66, 66, 66),
+    -1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 1.8px rgba(0, 0, 0, 0.3);
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  
+
+  #question {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(#a985ff, #6343ac);
+    margin: 20px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 53px;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0px 8px #3a2179;
+    font-weight: bold;
+    text-shadow: 2px 4px 10px #1d0b44;
+    letter-spacing: -5px;
+    text-align: center;
+  }
+  
+  #choices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+  
+  .box {
+    background: linear-gradient(#ffffff, #f0f0f0, #d3d3d3);
+    height: 80px;
+    font-size: 24px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 80px;
+    box-shadow: 0px 4px rgb(167, 167, 167);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .box:active {
+    top: 2px;
+    background-color: #9c89f6;
+    color: white;
+    box-shadow: none;
+  }
+
+  .exit-btn {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 14px;
+    padding: 7px 20px;
+    box-shadow: none;
+    background: linear-gradient(to bottom, #ff856f, #e5331b);
+    box-shadow: 0 4px #a32413;
+}
+  
+  #startreset {
+    background-color: #fff;
+    text-align: center;
+    padding: 12px;
+    margin: 0 auto 15px;
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 0px 4px grey;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  #goToInstructions, #startGameBtn, #restartBtn {
+    background: linear-gradient(to bottom, #f3c941, #c99b1c);
+    box-shadow: 4px 4px 4px #a19204;
+  }
+
+  #exitBtnHome, #returnBtnHome, #exitToHomeBtn {
+    background: linear-gradient(to bottom, #ff856f, #e5331b);
+    box-shadow: 0 4px #a32413;
+  }
+  
+  #startreset:active {
+    top: 2px;
+    box-shadow: none;
+    background-color: #9c89f6;
+    color: white;
+  }
+  
+  #timeremaining {
+    position: absolute;
+    right: 90px;
+    top: 10px;
+    display: block;
+    text-align: center;
+    background: #c6adff;
+    padding: 8px;
+    border-radius: 9.5px;
+    font-weight: bold;
+    
+  }
+  
+  
+
+#volumeSlider {
+  width: 100%;
+}
+
+#settingsContainer, #gameOverScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+#volumeControlWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 25px;
+}
+
+#volumeControlWrapper label {
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+#volumeControlWrapper input[type="range"] {
+  flex: 1;
+  height: 20px;
+  max-width: 200px;
+}
+
+#settingsContainer button {
+  width: auto;
+  max-width: 200px;
+  background: linear-gradient(to bottom, #ff856f, #e5331b);
+    box-shadow: 0 4px #a32413;
+}
+
+
+#gameOverScreen #restartBtn {
+  box-shadow: 0px 4px 4px #776c04;
+}
+
+
+
+#gameOverGifWrapper img {
+  width: 120px;
+  height: auto;
+  margin-top: 0;
+}
+
+#gameOverContainer {
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#gameOverContainer button {
+  display: flex;
+  width: 200px;
+  gap: 10px;
+  justify-content: center;
+}
+
+#gameOverContainer h2 {
+  margin-bottom: 10px;
+}
+
+#gameover {
+  position: relative;
+  width: 90%;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f3c941, #c99b1c); 
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 20px;
+  display:flex;
+  align-items: center;
+  text-shadow:
+    -1.8px -1.8px 0 rgb(66, 66, 66),
+    1.8px -1.8px 0 rgb(66, 66, 66),
+    -1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 0 rgb(66, 66, 66),
+    1.8px 1.8px 1.8px rgba(0, 0, 0, 0.3);
+}
+
+.correct-answer {
+  color: green !important;
+  font-size: 40px;
+}
+
+.wrong-answer {
+  color: red !important;
+}
